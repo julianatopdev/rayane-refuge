@@ -8,7 +8,7 @@ body{
 
 font-family:'Poppins',sans-serif;
 
-background:#0f172a;
+background:#1C1C1C;
 
 color:white;
 
@@ -56,7 +56,7 @@ padding:20px;
 
 width:280px;
 
-background:#1e293b;
+background:#363636;
 
 padding:25px;
 
@@ -110,7 +110,7 @@ margin:auto;
 
 .counter-card{
 
-background:#1e293b;
+background:#363636;
 
 padding:25px;
 
@@ -130,7 +130,7 @@ display:block;
 
 margin-bottom:10px;
 
-color:#ff8fab;
+color:#9370DB;
 
 }
 
@@ -154,7 +154,7 @@ max-width:600px;
 
 margin:auto;
 
-background:#1e293b;
+background:#363636;
 
 padding:25px;
 
@@ -174,7 +174,7 @@ padding:12px 20px;
 
 border-radius:50px;
 
-background:#1DB954;
+background:#9370DB;
 
 color:white;
 
@@ -214,7 +214,7 @@ gap:25px;
 
 .post{
 
-background:#1e293b;
+background:#363636;
 
 border-radius:24px;
 
@@ -302,7 +302,7 @@ max-width:700px;
 
 margin:auto;
 
-background:#1e293b;
+background:#363636;
 
 padding:30px;
 
@@ -340,7 +340,7 @@ letter-spacing:1px;
 
 .music-quote{
 
-background:#334155;
+background:#696969;
 
 padding:20px;
 
@@ -354,7 +354,7 @@ line-height:1.8;
 
 .music-message{
 
-background:#243447;
+background:#4F4F4F;
 
 padding:20px;
 
@@ -382,7 +382,7 @@ flex-wrap:wrap;
 
 padding:18px;
 
-background:rgba(15,23,42,.9);
+background:rgba(54, 54, 54, 0.9);
 
 backdrop-filter:blur(10px);
 
@@ -420,7 +420,7 @@ margin:40px auto;
 
 padding:35px;
 
-background:#1e293b;
+background:#363636;
 
 border-radius:24px;
 
@@ -436,7 +436,7 @@ max-width:900px;
 
 margin:40px auto;
 
-background:#1e293b;
+background:#363636;
 
 padding:25px;
 

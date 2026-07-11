@@ -128,17 +128,17 @@ let mensagem = "";
 if(hora < 12){
 
 mensagem =
-"Bom dia, Rayane ❤️ Espero que hoje você encontre motivos para sorrir.";
+"Bom dia, minha linda! Espero que hoje você encontre motivos para sorrir.";
 
 }else if(hora < 18){
 
 mensagem =
-"Boa tarde, Rayane ❤️ Pensei em você enquanto organizava nossas memórias.";
+"Boa tarde, meu amor! Pensei em você enquanto organizava nossas memórias.";
 
 }else{
 
 mensagem =
-"Boa noite, Rayane ❤️ Espero que seu dia tenha sido leve e gentil com você.";
+"Boa noite, minha vida! Espero que seu dia tenha sido leve e gentil com você.";
 
 }
 

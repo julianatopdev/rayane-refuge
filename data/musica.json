@@ -1,4 +1,5 @@
-{
+[
+  {
   "titulo": "Você Tem",
   "artista": "Dreicon & Carol Biazin",
   "spotify": "https://open.spotify.com/intl-pt/track/6MMeHHFx8H30NoxkfAD5Bn?si=090512ea88cb48d2",
@@ -6,4 +7,15 @@
   "trecho": "Eu sei que talvez seja cedo demais mas você tem tudo que eu gosto e um pouco mais vai parecer que sou louco pra mim tanto faz mas você tem tudo que eu gosto e um pouco mais",
 
   "mensagem": "Queria manter minha pose de quem detesta essa tal Carol Biazin... mas honestamente, muito do que ela fala me lembra de nós, de você. E navegando pela discografia ampla dela, cai de paraquedas nessa música. Confesso que, perdida na movimentação da rotina me assustei quando prestei atenção neste trecho, sinto que tiraram um pedaço dos meus pensamentos e fizeram ele kkkk. Enfim... xixei, eu sei. Assim como sei que talvez seja cedo; como sei que você tem tudo que eu gosto; como sei que talvez pareça louca; e como não só sei mas vejo que tu não tem só um pouco, mas muito mais..."
-}
+  },
+
+  {
+  "titulo": "O Amor do Mundo Inteiro",
+  "artista": "Chapéu de Palha",
+  "spotify": "https://open.spotify.com/intl-pt/track/4ephGEwWsjs8lQkNt2o8BU?si=37f76fadfca14bbd",
+
+  "trecho": "E te lembrar que toda saudade um dia vai passar e se Deus quiser um dia a gente vai casar",
+
+  "mensagem": "Essa semana fez um mês desde que nos vimos pela primeira, e ultima vez. E desde então tenho vivído uma saudade que não cabe no peito. Mas sabe algo sinistro de maneiro? Um dia tu vai bem cansar do meu rosto. Vai ver ele todas as noites ao dormir, e todos os dias ao acordar. Bebê, não tem saudade desse mundo que diminua meu amor e desejo por ti! Não te tenho no fisíco, mas te tenho na alma. Te tenho nos meus pensamentos, e ainda te toco em meus sonhos. Vivo ansiosa, a espera do nosso futuro, mas enquanto isso, aprecio a saudade e a doçura perversa dos nossos encontros."
+  }
+]
