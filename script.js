@@ -33,33 +33,29 @@ document.getElementById("diasNamoro")
 .textContent =
 calcularDias(datas.pedidoNamoro);
 
-async function carregarMusica(){
+async function carregarMusica() {
 
-const response =
-await fetch("./data/musica.json");
+    const response = await fetch("./data/musicas.json");
 
-const musica =
-await response.json();
+    const musicas = await response.json();
 
-document.getElementById("songTitle")
-.textContent =
-musica.titulo;
+    // pega a última música cadastrada
+    const musica = musicas[musicas.length - 1];
 
-document.getElementById("songArtist")
-.textContent =
-musica.artista;
+    document.getElementById("songTitle").textContent =
+        musica.titulo;
 
-document.getElementById("spotifyLink")
-.href =
-musica.spotify;
+    document.getElementById("songArtist").textContent =
+        musica.artista;
 
-document.getElementById("songTrecho")
-.textContent =
-musica.trecho;
+    document.getElementById("songTrecho").textContent =
+        musica.trecho;
 
-document.getElementById("songMensagem")
-.textContent =
-musica.mensagem;
+    document.getElementById("songMensagem").textContent =
+        musica.mensagem;
+
+    document.getElementById("spotifyLink").href =
+        musica.spotify;
 
 }
 
