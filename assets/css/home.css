@@ -308,6 +308,103 @@ padding-bottom:0;
 
 
 
+.counter-card {
+
+    width:100%;
+
+    max-width:600px;
+
+
+    padding:25px 18px;
+
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.15);
+
+
+    border-radius:28px;
+
+
+    backdrop-filter:blur(20px);
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,0.25);
+
+
+}
+
+
+
+
+
+.counter-card h3 {
+
+    text-align:center;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.time-counter {
+
+
+    width:100%;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+
+.time-counter div {
+
+
+    text-align:center;
+
+
+    background:
+
+    rgba(255,255,255,0.06);
+
+
+    padding:12px 5px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
 
 
 .time-counter span {
@@ -333,9 +430,7 @@ padding-bottom:0;
 
     animation:
 
-    aparecerNumero .4s ease;
-
-
+    transition: .25s;
 
 }
 

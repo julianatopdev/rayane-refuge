@@ -1,129 +1,125 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+document.addEventListener("DOMContentLoaded", carregarMusicas);
 
-<head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nossas Músicas 🎵</title>
+async function carregarMusicas(){
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    const lista =
+    document.getElementById(
+        "listaMusicas"
+    );
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    try {
 
-<link rel="stylesheet" href="../assets/css/global.css">
-<link rel="stylesheet" href="../assets/css/music.css">
 
-</head>
+        const resposta =
+        await fetch("../data/musicas.json");
 
 
-<body>
 
+        const musicas =
+        await resposta.json();
 
-<div class="background-glow"></div>
 
 
+        musicas.forEach(
+            (musica, index)=>{
 
-<header class="page-header">
 
-<p>
-nossa trilha sonora
-</p>
+                const card =
+                document.createElement("article");
 
 
-<h1>
-Músicas 🎵
-</h1>
+                card.className =
+                "song-card";
 
 
-</header>
 
+                card.innerHTML = `
 
 
+                <div class="album">
 
+                    ${index === 0 ? "🎵" : "🎵"}
 
+                </div>
 
-<section class="playlist-cover">
 
 
-<div class="cover-icon">
-🎧
-</div>
+                <div class="song-info">
 
 
-<h2>
-R & J
-</h2>
+                    <h3>
+                    ${musica.titulo}
+                    </h3>
 
 
-<p>
-Canções que carregam um pedaço da nossa história.
-</p>
 
+                    <span>
+                    ${musica.artista}
+                    </span>
 
-</section>
 
 
 
+                    <p>
+                    ${musica.mensagem}
+                    </p>
 
 
 
 
-<section 
-class="songs"
-id="listaMusicas">
+                    <a 
+                    href="${musica.spotify}"
+                    target="_blank"
+                    class="listen">
 
 
-</section>
+                    🎧 Ouvir música
 
 
+                    </a>
 
 
 
+                </div>
 
 
+                `;
 
-<nav class="mobile-nav">
 
 
-<a href="../index.html">
-🏠
-</a>
+                lista.appendChild(card);
 
 
-<a class="active">
-🎵
-</a>
 
+            }
+        );
 
-<a href="cartas.html">
-💌
-</a>
 
 
-<a href="galeria.html">
-📸
-</a>
+    } catch(error){
 
 
-<a href="timeline.html">
-✨
-</a>
+        lista.innerHTML = `
 
+        <p class="erro">
 
-</nav>
+        Não foi possível carregar
+        nossas músicas 💜
 
+        </p>
 
+        `;
 
 
+        console.error(error);
 
-<script src="../assets/js/music.js"></script>
 
+    }
 
-</body>
 
-</html>
+
+}

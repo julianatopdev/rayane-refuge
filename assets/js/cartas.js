@@ -12,13 +12,11 @@ document.getElementById("fecharCarta");
 
 async function carregarCartas(){
 
-   const resposta = await fetch("../data/posts.json");
+    const resposta =
+    await fetch("../data/posts.json");
 
-if (!resposta.ok) {
-    throw new Error("Não foi possível carregar posts.json");
-}
-
-const cartas = await resposta.json();
+    const cartas =
+    await resposta.json();
 
     cartas
     .sort((a,b)=>new Date(b.data)-new Date(a.data))
@@ -46,10 +44,9 @@ const cartas = await resposta.json();
     </p>
 
 </div>
-
 `;
 
-       envelope.onclick = () => {
+        envelope.onclick = () => {
 
     envelope.style.transform = "scale(.96)";
 
@@ -70,6 +67,10 @@ const cartas = await resposta.json();
 }
 
 function abrirCarta(carta){
+
+    modal.classList.add("ativo");
+
+document.body.style.overflow="hidden";
 
     conteudo.innerHTML=`
 
@@ -112,7 +113,9 @@ function abrirCarta(carta){
 
 fechar.onclick=()=>{
 
-    modal.classList.remove("ativo");
+    document.body.style.overflow="";
+
+modal.classList.remove("ativo");
 
 };
 
@@ -125,15 +128,15 @@ modal.querySelector(".modal-overlay")
 
 function formatarData(data){
 
-    return new Date(data)
-    .toLocaleDateString(
-        "pt-BR",
-        {
-            day:"2-digit",
-            month:"long",
-            year:"numeric"
-        }
-    );
+    const d = new Date(data);
+
+    return d.toLocaleDateString("pt-BR",{
+
+        day:"2-digit",
+        month:"long",
+        year:"numeric"
+
+    }).replace(" de "," • ").replace(" de "," • ");
 
 }
 

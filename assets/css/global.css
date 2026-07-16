@@ -1,77 +1,398 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
 
-font-family:'Inter',sans-serif;
+    font-family:'Inter',sans-serif;
 
-background:
-linear-gradient(
-180deg,
-#09090b,
-#111827,
-#0f172a
-);
+    color:#ffffff;
 
-color:white;
+    background:#050816;
 
-min-height:100vh;
+    overflow-x:hidden;
 
-padding-bottom:90px;
+    min-height:100vh;
 
-overflow-x:hidden;
+    padding-bottom:90px;
 
 }
 
-a{
-text-decoration:none;
-color:inherit;
-}
+/* ===========================
+   CORES
+=========================== */
 
-.background-glow{
+:root{
 
-position:fixed;
+    --blue:#3B82F6;
+    --blue-light:#60A5FA;
 
-width:500px;
-height:500px;
+    --purple:#A855F7;
+    --purple-light:#C084FC;
 
-background:#f472b633;
+    --white:#FFFFFF;
 
-filter:blur(140px);
+    --text:#CBD5E1;
 
-top:-150px;
-left:-150px;
+    --glass:rgba(255,255,255,.06);
 
-z-index:-1;
-
-}
-
-section{
-
-width:min(1100px,92%);
-
-margin:auto;
+    --glass-border:rgba(255,255,255,.10);
 
 }
+
+/* ===========================
+   FUNDO
+=========================== */
+
+.bg-gradient{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(59,130,246,.22),
+    transparent 40%),
+
+    radial-gradient(circle at top right,
+    rgba(168,85,247,.22),
+    transparent 40%),
+
+    linear-gradient(
+    180deg,
+    #050816,
+    #08111f,
+    #111827);
+
+}
+
+/* brilho azul */
+
+.bg-gradient::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.18);
+
+    filter:blur(120px);
+
+    left:-120px;
+
+    top:120px;
+
+}
+
+/* brilho roxo */
+
+.bg-gradient::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(168,85,247,.18);
+
+    filter:blur(120px);
+
+    right:-120px;
+
+    bottom:80px;
+
+}
+
+/* ===========================
+   TIPOGRAFIA
+=========================== */
 
 h1,h2,h3{
 
-font-weight:700;
+    font-weight:700;
 
 }
 
 p{
 
-line-height:1.8;
+    color:var(--text);
 
-color:#cbd5e1;
+    line-height:1.8;
+
+}
+
+small{
+
+    color:#94A3B8;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   GLASS
+=========================== */
+
+.glass{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid var(--glass-border);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.30);
+
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 26px;
+
+    border-radius:50px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--blue),
+    var(--purple)
+    );
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 15px 40px rgba(59,130,246,.35);
+
+}
+
+/* ===========================
+   IMAGENS
+=========================== */
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+    var(--blue),
+
+    var(--purple)
+
+    );
+
+    border-radius:50px;
+
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.fade{
+
+    animation:fade .8s ease both;
+
+}
+
+.scale{
+
+    animation:scale .7s ease both;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes scale{
+
+from{
+
+opacity:0;
+
+transform:scale(.92);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+section{
+
+    width:min(1100px,92%);
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+body{
+
+padding-bottom:90px;
+
+}
+
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media(min-width:900px){
+
+body{
+
+padding-top:90px;
+
+padding-bottom:0;
+
+}
 
 }
 

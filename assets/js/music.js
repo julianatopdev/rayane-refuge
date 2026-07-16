@@ -1,8 +1,14 @@
-document.addEventListener("DOMContentLoaded", carregarMusicas);
-
-
-
 async function carregarMusicas(){
+
+
+    const resposta =
+    await fetch("../data/musicas.json");
+
+
+
+    const musicas =
+    await resposta.json();
+
 
 
     const lista =
@@ -11,115 +17,83 @@ async function carregarMusicas(){
     );
 
 
-    try {
+
+    musicas.forEach(
+        (musica,index)=>{
 
 
-        const resposta =
-        await fetch("../data/musicas.json");
+            const card =
+            document.createElement(
+                "article"
+            );
 
 
-
-        const musicas =
-        await resposta.json();
-
-
-
-        musicas.forEach(
-            (musica, index)=>{
-
-
-                const card =
-                document.createElement("article");
-
-
-                card.className =
-                "song-card";
+            card.classList.add(
+                "song-card"
+            );
 
 
 
-                card.innerHTML = `
+            card.innerHTML = `
 
 
-                <div class="album">
+            <div class="album">
 
-                    ${index === 0 ? "🎵" : "🎵"}
+            ${index === 0 ? "🎵" : "🎵"}
 
-                </div>
-
-
-
-                <div class="song-info">
-
-
-                    <h3>
-                    ${musica.titulo}
-                    </h3>
+            </div>
 
 
 
-                    <span>
-                    ${musica.artista}
-                    </span>
+            <div class="song-info">
+
+
+            <h3>
+            ${musica.titulo}
+            </h3>
 
 
 
-
-                    <p>
-                    ${musica.mensagem}
-                    </p>
-
+            <span>
+            ${musica.artista}
+            </span>
 
 
 
-                    <a 
-                    href="${musica.spotify}"
-                    target="_blank"
-                    class="listen">
-
-
-                    🎧 Ouvir música
-
-
-                    </a>
+            <p>
+            ${musica.mensagem}
+            </p>
 
 
 
-                </div>
+            <a 
+            href="${musica.spotify}"
+            target="_blank"
+            class="listen">
+
+            🎧 Ouvir no Spotify
+
+            </a>
 
 
-                `;
+            </div>
+
+
+            `;
 
 
 
-                lista.appendChild(card);
+            lista.appendChild(card);
 
 
 
-            }
-        );
-
-
-
-    } catch(error){
-
-
-        lista.innerHTML = `
-
-        <p class="erro">
-
-        Não foi possível carregar
-        nossas músicas 💜
-
-        </p>
-
-        `;
-
-
-        console.error(error);
-
-
-    }
+        }
+    );
 
 
 
 }
+
+
+
+carregarMusicas();
