@@ -6,186 +6,543 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nosso Espaço</title>
+<title>R & J</title>
 
-<link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="assets/css/global.css">
+<link rel="stylesheet" href="assets/css/home.css">
+
 
 </head>
 
+
 <body>
 
-    <nav class="navbar">
+<!-- TELA DE ABERTURA -->
 
-    <a href="index.html">Início</a>
+<div class="opening-screen">
 
-    <a href="paginas/musicas.html">
-        Músicas
-    </a>
 
-    <a href="paginas/cartas.html">
-        Cartas
-    </a>
+    <div class="stars"></div>
 
-    <a href="paginas/galeria.html">
-        Galeria
-    </a>
 
-    <a href="paginas/timeline.html">
-        Timeline
-    </a>
+    <div class="opening-content">
 
-</nav>
+
+        <div class="opening-heart">
+            ❤️
+        </div>
+
+
+        <p class="opening-text">
+            Algumas pessoas chegam por acaso...
+        </p>
+
+
+        <p class="opening-text delay">
+            Mas algumas parecem ter sido encontradas pelo destino.
+        </p>
+
+
+        <h1>
+            Te amo!
+        </h1>
+
+
+        <button id="enterSite">
+            Entrar no nosso universo ✨
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<div class="background-glow"></div>
+
+
+
+
 
 <header class="hero">
 
+
 <div class="hero-content">
 
-<h1>Nosso Espaço</h1>
 
-<p>
-Um lugar para guardar as nossas memórias, que torço para que sejam infinitas.
+<p class="subtitle">
+our little universe
 </p>
 
+
+
+<h1>
+R & J ❤️
+</h1>
+
+
+
+<p class="hero-text">
+
+Um lugar onde cada memória tem um lar.
+
+</p>
+
+
+
 </div>
+
 
 </header>
 
-<section class="profiles">
 
-<div class="profile">
 
-<img src="imagens/juliana.jpg">
 
-<h2>Juliana</h2>
 
-<p>
-Criadora careca suprema deste cantinho.
-</p>
 
-</div>
 
-<div class="profile">
+<section class="intro-card">
 
-<img src="imagens/rayane.jpg">
 
-<h2>Rayane</h2>
+<h2>
+Para Rayane
+</h2>
+
+
 
 <p>
-A pessoa linda que inspirou tudo isso.
+
+Criei este pequeno refúgio para guardar
+as nossas memórias, nossas músicas,
+nossos momentos e todas as coisas
+que me fazem lembrar de você.
+
 </p>
 
-</div>
 
 </section>
+
+
+
+
+
+
+
+
 
 <section class="counters">
 
-<h2>Nossa História</h2>
 
-<div class="counter-grid">
 
-<div class="counter-card">
-<span id="diasConhecemos">0</span>
-<p>Desde que nos conhecemos</p>
-</div>
+
 
 <div class="counter-card">
-<span id="diasEncontro">0</span>
-<p>Desde o primeiro encontro</p>
+
+
+<h3>
+✨ Desde que nos conhecemos
+</h3>
+
+
+
+<div class="time-counter">
+
+
+<div>
+
+<span id="conhecemosDias">
+0
+</span>
+
+<small>
+dias
+</small>
+
 </div>
+
+
+
+<div>
+
+<span id="conhecemosHoras">
+0
+</span>
+
+<small>
+horas
+</small>
+
+</div>
+
+
+
+
+<div>
+
+<span id="conhecemosMinutos">
+0
+</span>
+
+<small>
+min
+</small>
+
+</div>
+
+
+
+
+<div>
+
+<span id="conhecemosSegundos">
+0
+</span>
+
+<small>
+seg
+</small>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
 
 <div class="counter-card">
-<span id="diasNamoro">0</span>
-<p>Desde o pedido de namoro</p>
-</div>
+
+
+<h3>
+💜 Desde o primeiro encontro
+</h3>
+
+
+
+<div class="time-counter">
+
+
+<div>
+
+<span id="encontroDias">
+0
+</span>
+
+<small>
+dias
+</small>
 
 </div>
+
+
+
+<div>
+
+<span id="encontroHoras">
+0
+</span>
+
+<small>
+horas
+</small>
+
+</div>
+
+
+
+
+<div>
+
+<span id="encontroMinutos">
+0
+</span>
+
+<small>
+min
+</small>
+
+</div>
+
+
+
+
+<div>
+
+<span id="encontroSegundos">
+0
+</span>
+
+<small>
+seg
+</small>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="counter-card">
+
+
+<h3>
+❤️ Desde o nosso sim
+</h3>
+
+
+
+<div class="time-counter">
+
+
+<div>
+
+<span id="namoroDias">
+0
+</span>
+
+<small>
+dias
+</small>
+
+</div>
+
+
+
+<div>
+
+<span id="namoroHoras">
+0
+</span>
+
+<small>
+horas
+</small>
+
+</div>
+
+
+
+
+<div>
+
+<span id="namoroMinutos">
+0
+</span>
+
+<small>
+min
+</small>
+
+</div>
+
+
+
+
+<div>
+
+<span id="namoroSegundos">
+0
+</span>
+
+<small>
+seg
+</small>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
 
 </section>
 
-<section class="music">
 
-<h2>Música que ouvi pensando em você</h2>
 
-<div class="music-card">
 
-<h3 id="songTitle"></h3>
 
-<p id="songArtist"></p>
 
-<div class="music-quote">
 
-<span>Trecho que me lembrou você</span>
 
-<p id="songTrecho"></p>
 
-</div>
+<section class="quick-access">
 
-<div class="music-message">
 
-<span>Por que pensei em você</span>
 
-<p id="songMensagem"></p>
+<a href="paginas/musicas.html" class="feature-card">
 
-</div>
 
-<a
-id="spotifyLink"
-target="_blank">
+🎵
 
-Ouvir no Spotify
+
+<h3>
+Músicas
+</h3>
+
+
+<p>
+Todas as músicas que me lembraram você.
+</p>
+
 
 </a>
 
-</div>
+
+
+
+
+<a href="paginas/cartas.html" class="feature-card">
+
+
+💌
+
+
+<h3>
+Cartas
+</h3>
+
+
+<p>
+Coisas que só cabem em palavras.
+</p>
+
+
+</a>
+
+
+
+
+
+<a href="paginas/galeria.html" class="feature-card">
+
+
+📸
+
+
+<h3>
+Galeria
+</h3>
+
+
+<p>
+Momentos que merecem ser revisitados.
+</p>
+
+
+</a>
+
+
+
+
+
+<a href="paginas/timeline.html" class="feature-card">
+
+
+✨
+
+
+<h3>
+Timeline
+</h3>
+
+
+<p>
+Nossa história em ordem cronológica.
+</p>
+
+
+</a>
+
+
 
 </section>
 
-<section class="feed">
 
-<h2>Nosso Feed</h2>
 
-<div id="postsContainer"></div>
 
-</section>
 
-<section class="welcome-card">
 
-<h2>Uma mensagem para você</h2>
 
-<p id="mensagemDia"></p>
 
-</section>
 
-<section class="memory-card">
+<nav class="mobile-nav">
 
-<h2>Memória do Dia</h2>
 
-<img id="memoriaFoto">
+<a href="index.html">
+🏠
+</a>
 
-<p id="memoriaTexto"></p>
 
-</section>
+<a href="paginas/musicas.html">
+🎵
+</a>
 
-<section class="ultimo-post">
 
-<h2>Última memória publicada</h2>
+<a href="paginas/cartas.html">
+💌
+</a>
 
-<div id="ultimoPost"></div>
 
-</section>
+<a href="paginas/galeria.html">
+📸
+</a>
 
-<footer>
 
-Feito com amor por Juliana sonic bobo
-para Rayane, o meu grande amor.
+<a href="paginas/timeline.html">
+✨
+</a>
 
-</footer>
 
-<script src="script.js"></script>
+
+</nav>
+
+
+
+
+
+
+
+<script src="assets/js/app.js"></script>
+
 
 </body>
+
 </html>

@@ -1,0 +1,125 @@
+document.addEventListener("DOMContentLoaded", carregarMusicas);
+
+
+
+async function carregarMusicas(){
+
+
+    const lista =
+    document.getElementById(
+        "listaMusicas"
+    );
+
+
+    try {
+
+
+        const resposta =
+        await fetch("../data/musicas.json");
+
+
+
+        const musicas =
+        await resposta.json();
+
+
+
+        musicas.forEach(
+            (musica, index)=>{
+
+
+                const card =
+                document.createElement("article");
+
+
+                card.className =
+                "song-card";
+
+
+
+                card.innerHTML = `
+
+
+                <div class="album">
+
+                    ${index === 0 ? "🎵" : "🎵"}
+
+                </div>
+
+
+
+                <div class="song-info">
+
+
+                    <h3>
+                    ${musica.titulo}
+                    </h3>
+
+
+
+                    <span>
+                    ${musica.artista}
+                    </span>
+
+
+
+
+                    <p>
+                    ${musica.mensagem}
+                    </p>
+
+
+
+
+                    <a 
+                    href="${musica.spotify}"
+                    target="_blank"
+                    class="listen">
+
+
+                    🎧 Ouvir música
+
+
+                    </a>
+
+
+
+                </div>
+
+
+                `;
+
+
+
+                lista.appendChild(card);
+
+
+
+            }
+        );
+
+
+
+    } catch(error){
+
+
+        lista.innerHTML = `
+
+        <p class="erro">
+
+        Não foi possível carregar
+        nossas músicas 💜
+
+        </p>
+
+        `;
+
+
+        console.error(error);
+
+
+    }
+
+
+
+}
