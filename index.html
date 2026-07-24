@@ -25,46 +25,13 @@
 
 <body>
 
-<!-- TELA DE ABERTURA -->
+<script>
 
-<div class="opening-screen">
+if(!sessionStorage.getItem("introVista")){
+    window.location.replace("intro.html");
+}
 
-
-    <div class="stars"></div>
-
-
-    <div class="opening-content">
-
-
-        <div class="opening-heart">
-            ❤️
-        </div>
-
-
-        <p class="opening-text">
-            Algumas pessoas chegam por acaso...
-        </p>
-
-
-        <p class="opening-text delay">
-            Mas algumas parecem ter sido encontradas pelo destino.
-        </p>
-
-
-        <h1>
-            Te amo, Rayane!
-        </h1>
-
-
-        <button id="enterSite">
-            Entrar
-        </button>
-
-
-    </div>
-
-
-</div>
+</script>
 
 
 <div class="background-glow"></div>
@@ -540,10 +507,12 @@ Nossa história em ordem cronológica.
 
 
 
-
+<div id="pageTransition"></div>
 
 
 <script src="assets/js/app.js"></script>
+
+<script src="assets/js/transition.js"></script>
 
 
 </body>

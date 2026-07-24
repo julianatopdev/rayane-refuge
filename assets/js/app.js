@@ -467,3 +467,4 @@ if(botaoEntrada && abertura){
 
 
 }
+

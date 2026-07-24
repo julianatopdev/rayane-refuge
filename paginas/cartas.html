@@ -20,6 +20,14 @@
 
 <body>
 
+    <script>
+
+if(!sessionStorage.getItem("introVista")){
+    window.location.replace("../intro.html");
+}
+
+</script>
+
 <div class="background-glow"></div>
 
 <header class="page-header">
@@ -66,7 +74,11 @@ class="lista-cartas">
 
 </nav>
 
+<div id="pageTransition"></div>
+
 <script src="../assets/js/cartas.js"></script>
+
+<script src="../assets/js/transition.js"></script>
 
 </body>
 </html>

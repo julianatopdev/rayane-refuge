@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", carregarMusicas);
 
+<script>
 
+if(!sessionStorage.getItem("introVista")){
+    window.location.replace("../intro.html");
+}
+
+</script>
 
 async function carregarMusicas(){
 
@@ -123,3 +129,6 @@ async function carregarMusicas(){
 
 
 }
+
+<div id="pageTransition"></div>
+<script src="../assets/js/transition.js"></script>
